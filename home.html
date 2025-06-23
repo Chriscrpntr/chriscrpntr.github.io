@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chris Carpenter</title>
+    <style>
+        html, body {
+            font-family: Arial, sans-serif;
+            height: 97%;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 15px;
+            background-color: #121212;
+            text-align: center;
+            color: #e0e0e0;
+        }
+        .flex-container {
+            flex: 1; /* Makes the flex-container take up all remaining height */
+        }
+        h1 {
+            letter-spacing: 0.2em;
+            color: #ffffff;
+            margin: 20px auto;
+            text-align: center;
+            animation: glow 2s infinite alternate;
+        }
+
+        a.button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: background-color 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-align: center;
+        }
+        a.button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 0 15px #00bcd4, 0 0 25px #00bcd4;
+        }
+        .button-group h2 {
+            text-align: center; /* Center-align text */
+            margin-bottom: 15px; /* Add some spacing below */
+            color: #e0e0e0; /* Keep consistent color */
+        }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 20px; /* Space between groups */
+
+            /* Fixed yellow border */
+            border: 1px solid #00bcd4; /* Bright yellow */
+        }
+
+        footer {
+            margin-top: auto; /* Push the footer to the bottom of the page */
+            padding: 10px; /* Add some padding */
+            background-color: #1f1f1f; /* Optional: Add background for footer section */
+            color: #e0e0e0; /* Footer text color */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow above footer */
+        }
+
+        /* Glow animation */
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #00bcd4, 0 0 10px #00bcd4, 0 0 20px #00bcd4;
+            }
+            to {
+                text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 50px yellow;
+            }
+        }
+
+        /* Flex container for side-by-side layout */
+        .flex-container {
+            display: flex;
+            justify-content: space-between; /* Places sections on opposite ends */
+            align-items: flex-start;
+            gap: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        /* Links Section Styling */
+        .left-section {
+            width: 45%; /* 45% width for the left side */
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: left;
+        }
+
+        /* Accomplishments Section Styling */
+        .right-section {
+            width: 45%; /* 45% width for the right side */
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: left;
+        }
+
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 800px) {
+            .flex-container {
+                flex-direction: column; /* Stack sections vertically */
+            }
+            .left-section, .right-section {
+                width: 100%; /* Full width for each section */
+            }
+        }
+
+        /* Accomplishments list */
+        .accomplishments h2 {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+            text-align: center;
+        }
+        .accomplishments ul {
+            list-style: none;
+            padding: 0;
+        }
+        .accomplishments li {
+            background: linear-gradient(90deg, rgba(0,123,255,0.15), rgba(0,123,255,0));
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background 0.3s, box-shadow 0.3s;
+            color: #e0e0e0;
+        }
+        .accomplishments li:hover {
+            background: #1d3557;
+            box-shadow: 0 0 15px #00bcd4;
+        }
+        .accomplishments li::before {
+            content: "✔";
+            color: #00bcd4;
+            margin-right: 10px;
+        }
+
+        body {
+            background-color: #121212;
+            background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 1px, #1b2836 1px),
+                              linear-gradient(rgba(0, 0, 0, 0) 1px, #1b2836 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chris Carpenter | Software Systems Engineer</h1>
+    <div class="flex-container">
+        <!-- Links Section -->
+        <div class="left-section">
+
+            <div class="button-group">
+                <h2>Spreadsheets</h2>
+                <a class="button" href="https://sheets.wiki">Sheets Wiki</a>
+                <a class="button" href="https://github.com/Astral1119/sheets-bot">Sheets bot for Spreadsheet Discord</a>
+                <a class="button" href="https://github.com/Chriscrpntr/Gsheets-Addon">Utility Tools Addon for Google Sheets</a>
+            </div>
+
+            <div class="button-group">
+                <h2>GitHub</h2>
+                <a class='button' href="https://github.com/Chriscrpntr" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <!-- Accomplishments Section -->
+        <div class="right-section accomplishments">
+            <h2>Accomplishments</h2>
+            <ul>
+                <li>Developed a Python-based replacement for a legacy FoxPro DOS production system, including a website, PostgreSQL database, and APIs.</li>
+                <li>Deployed a secure no-code mobile application for streamlined inventory management, product tracking, and remote data access.</li>
+                <li>Trained and implemented a neural network model to detect and classify anomalies in metal chemistry data, improving quality control and automating the data review process.</li>
+                <li>Designed and improved critical spreadsheet systems.</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Chris Carpenter</p>
+        <p>Contact: <a href="mailto:chriscrpntr@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/chris-carpenter-996bb9208/">LinkedIn</a></p>
+    </footer>
+</body>
+</html>
